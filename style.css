@@ -7,13 +7,6 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-body>#title {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 5em;
-    text-align: center;
-    margin-top: 1em;
-}
-
 body>#countdown {
     position: fixed;
     top: 0;
