@@ -33,3 +33,13 @@ body>#countdown {
     font-size: 2rem;
     cursor: pointer;
 }
+
+#fullscreen {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.25rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1vh;
+}
