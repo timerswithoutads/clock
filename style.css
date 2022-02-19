@@ -21,4 +21,15 @@ body>#countdown {
     color: white;
     font-family: 'Quicksand', sans-serif;
     transition: 5s;
+    cursor: default;
+}
+
+#settings_icon {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
 }

@@ -38,33 +38,33 @@ var timer = setInterval(function() {
 }, 100);
 
 
+
+
 // If mouse doesn't move for 5 seconds, hide the cursor
+
+
+// Initialize the timer
 var mouseTimer = setTimeout(function() {
-
-    // Hide the cursor
     document.body.style.cursor = "none";
+}, 5000);
 
-}, 2500);
-
-function resetMouseMoves() {
-    // Clear the timer
+// Functions to hide and show the elements
+function hideAdditionalElements() {
     clearTimeout(mouseTimer);
-
-    // Show the cursor
     document.body.style.cursor = "default";
-
-    // Set the timer again
-    mouseTimer = setTimeout(function() {
-
-        // Hide the cursor
-        document.body.style.cursor = "none";
-    }, 2500);
 }
+
+function showAdditionalElements() {
+    document.body.style.cursor = "default";
+    mouseTimer = setTimeout(function() {
+        document.body.style.cursor = "none";
+    }, 5000);
+}
+
+// Event listeners
 document.onmousemove = function() {
-    resetMouseMoves();
+    showAdditionalElements();
 }
 document.onclick = function() {
-
-    // Show the cursor
-    resetMouseMoves();
+    showAdditionalElements();
 }
