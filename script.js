@@ -41,7 +41,6 @@ var timer = setInterval(function() {
 
 // The full screen button
 
-
 // Get the full screen button element
 var fullScreenButton = document.getElementById("fullscreen");
 
@@ -86,6 +85,8 @@ fullScreenButton.addEventListener("click", function() {
 
 // If mouse doesn't move for 5 seconds, hide the cursor
 
+// Get the settings button element
+var settingsButton = document.getElementById("settings_icon");
 
 // Initialize the timer
 var mouseTimer = setTimeout(function() {
@@ -96,12 +97,19 @@ var mouseTimer = setTimeout(function() {
 function hideAdditionalElements() {
     clearTimeout(mouseTimer);
     document.body.style.cursor = "default";
+    settingsButton.style.fontSize = "2rem";
+    fullScreenButton.style.fontSize = "1.25rem";
 }
 
 function showAdditionalElements() {
+    clearTimeout(mouseTimer);
     document.body.style.cursor = "default";
+    settingsButton.style.fontSize = "2rem";
+    fullScreenButton.style.fontSize = "1.25rem";
     mouseTimer = setTimeout(function() {
         document.body.style.cursor = "none";
+        settingsButton.style.fontSize = "0";
+        fullScreenButton.style.fontSize = "0";
     }, 5000);
 }
 
