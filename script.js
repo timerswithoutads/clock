@@ -117,3 +117,21 @@ document.onmousemove = function() {
 document.onclick = function() {
     showAdditionalElements();
 }
+
+
+// Add blur and open window, when the settings button is clicked
+
+settings_div = document.getElementById("settings");
+
+settingsButton.addEventListener("click", function() {
+
+    // Open the settings window
+    settings_div.style.display = "block";
+
+    // Add black 0,5 opacity to the background
+    settings_div.style.backgroundColor = "rgba(0,0,0,0.5)";
+
+    // Change colors on the body background linear gradient
+    document.body.style.background = "linear-gradient(to left, rgba(34, 195, 128, 1), rgba(149, 28, 171, 1))";
+
+});
