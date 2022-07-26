@@ -29,7 +29,7 @@ var timer = setInterval(function() {
 
 
     // Display the time
-    document.getElementById("countdown").innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
 
 
 }, 100);
